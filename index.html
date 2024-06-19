@@ -1,42 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Telegram Web App</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        background-color: #f4f4f4;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-      }
-      .container {
-        background: white;
-        padding: 20px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        border-radius: 8px;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <h1>Telegram Web App</h1>
-      <p>Bu yerda Telegram orqali veb interfeys yaratish mumkin.</p>
-    </div>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const tg = window.Telegram.WebApp;
-        tg.expand();
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Durger King Clone</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo">Durger King</div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-        const container = document.querySelector(".container");
-        const user = tg.initDataUnsafe.user;
-        if (user) {
-          container.innerHTML += `<p>Salom, ${user.first_name}!</p>`;
-        }
-      });
-    </script>
-  </body>
+  <section id="home" class="section">
+    <h1>Welcome to Durger King</h1>
+    <p>Enjoy the best burgers in town!</p>
+  </section>
+
+  <section id="menu" class="section">
+    <h2>Our Menu</h2>
+    <div class="menu-item">
+      <img src="/img/burger.jpg" alt="Burger">
+      <h3>Classic Burger</h3>
+      <p>$5.99</p>
+    </div>
+    <div class="menu-item">
+      <img src="/img/cheeseburger.jpg" alt="Cheeseburger">
+      <h3>Cheeseburger</h3>
+      <p>$6.99</p>
+    </div>
+    <div class="menu-item">
+      <img src="/img/vegieburger.jpg" alt="Veggie Burger">
+      <h3>Veggie Burger</h3>
+      <p>$7.99</p>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <p>Email: info@durgerking.com</p>
+    <p>Phone: (123) 456-7890</p>
+  </section>
+
+  <script src="script.js"></script>
+</body>
 </html>
